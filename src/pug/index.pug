@@ -1,0 +1,18 @@
+-
+	var domain = './'
+	var imgSrc = './img/'
+	var description = 'foo'
+	var keywords = 'foo'
+	var title = 'foo'
+	var date = +new Date()
+
+doctype html
+html(lang='ja')
+	head
+		include include/meta
+		include include/ogp
+		include include/title
+		include include/css
+	body
+		p Hello,World.
+		include include/js

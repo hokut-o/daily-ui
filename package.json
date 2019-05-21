@@ -16,7 +16,7 @@
 	"devDependencies": {
 		"autoprefixer": "^9.5.1",
 		"babel-cli": "^6.26.0",
-		"babel-loader": "^8.0.5",
+		"babel-loader": "^8.0.6",
 		"babel-preset-env": "^1.7.0",
 		"browser-sync": "^2.26.5",
 		"css-mqpacker": "^7.0.0",
@@ -46,7 +46,7 @@
 		"imagemin-jpeg-recompress": "^6.0.0",
 		"imagemin-pngquant": "^7.0.0",
 		"jquery": "^3.4.1",
-		"lazysizes": "^5.0.0-rc2",
+		"lazysizes": "^5.0.0",
 		"merge-stream": "^1.0.1",
 		"picturefill": "^3.0.3",
 		"require-dir": "^1.2.0",
@@ -58,7 +58,7 @@
 		"vinyl-buffer": "^1.0.1",
 		"vinyl-source-stream": "^2.0.0",
 		"vinyl-yaml-data": "^2.0.1",
-		"webpack": "^4.31.0",
+		"webpack": "^4.32.0",
 		"webpack-stream": "^5.2.1"
 	},
 	"dependencies": {

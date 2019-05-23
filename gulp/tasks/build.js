@@ -1,23 +1,24 @@
-import gulp from 'gulp';
-import runSequence from 'run-sequence';
+import gulp from 'gulp'
+import runSequence from 'run-sequence'
 import pug from 'gulp-pug'
-import stylus from 'gulp-stylus';
+import stylus from 'gulp-stylus'
 import autoprefixer from 'autoprefixer'
-import plumber from 'gulp-plumber';
-import rupture from 'rupture';
-import imagemin from 'gulp-imagemin';
-import imageminPng from 'imagemin-pngquant';
-import imageminJpg from 'imagemin-jpeg-recompress';
-import imageminGif from 'imagemin-gifsicle';
+import plumber from 'gulp-plumber'
+import rupture from 'rupture'
+import imagemin from 'gulp-imagemin'
+import imageminPng from 'imagemin-pngquant'
+import imageminJpg from 'imagemin-jpeg-recompress'
+import imageminGif from 'imagemin-gifsicle'
 import webpackStream from 'webpack-stream'
 import webpack from 'webpack'
-import vinylYamlData from "vinyl-yaml-data";
-import deepExtend from "deep-extend-stream";
+import vinylYamlData from "vinyl-yaml-data"
+import deepExtend from "deep-extend-stream"
 import webpackConfig from '../../webpack.config.build'
 import paths from '../config'
-import mqpacker from "css-mqpacker";
-import sortCSSmq from "sort-css-media-queries";
-import postcss from "gulp-postcss";
+import mqpacker from "css-mqpacker"
+import sortCSSmq from "sort-css-media-queries"
+import postcss from "gulp-postcss"
+import cleanCSS from 'gulp-clean-css'
 
 let locals = {};
 
@@ -67,7 +68,7 @@ gulp.task('phpCopy', () => {
 });
 
 gulp.task('stylusBuild', () => {
-	return gulp.src(`${paths.stylus_src}`)
+	return gulp.src(`${paths.stylus_src}app.styl`)
 	.pipe(plumber())
 	.pipe(stylus({
 		use: [rupture()],
@@ -86,11 +87,12 @@ gulp.task('stylusBuild', () => {
 	.on('error', (err) => {
 		console.log(err.message);
 	})
+	.pipe(cleanCSS({level: {1: {specialComments: 0}}}))
 	.pipe(gulp.dest(`${paths.stylus_build}`))
 });
 
 gulp.task('pugBuild', ['yamlBuild'], () => {
-	return gulp.src(`${paths.pug_src}`)
+	return gulp.src([`${paths.pug_src}`,'!./src/pug/include/*.pug'])
 	.pipe(plumber())
 	.pipe(pug({
 		pretty: true

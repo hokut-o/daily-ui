@@ -1,6 +1,16 @@
 .p-carousel
+	opacity: 0
+	transition opacity .2s ease-out
+	margin-top: 20px
+	&.slick-initialized
+		opacity: 1
 	&__item
-		width: 950px
 		height: 500px
+		margin: 0 40px
+		transition opacity .2s ease-out
+		&:hover
+			cursor pointer
+			opacity: .8
 	&__body
-		width: 100%
+		width: 950px
+		border-radius: 20px

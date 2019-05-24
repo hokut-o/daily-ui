@@ -71,7 +71,6 @@
 		"gulp-inject": "^5.0.2",
 		"gulp-real-favicon": "^0.3.2",
 		"gulp-svg-sprite": "^1.5.0",
-		"gulp-watch": "^5.0.1",
-		"slick-carousel": "^1.8.1"
+		"gulp-watch": "^5.0.1"
 	}
 }

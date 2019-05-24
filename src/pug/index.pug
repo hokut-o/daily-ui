@@ -1,9 +1,9 @@
 -
 	var domain = './'
 	var imgSrc = './img/'
-	var description = 'Daily UI : 02'
+	var description = ''
 	var keywords = ''
-	var title = 'Daily UI : 02'
+	var title = ''
 	var date = +new Date()
 
 doctype html
@@ -13,15 +13,6 @@ html(lang='ja')
 		include include/title
 		include include/css
 	body
-		.p-daily02__container
-			h1.c-heading Daily UI
-			ul.p-carousel(data-target-carousel)
-				li.p-carousel__item
-					img.p-carousel__body(src=imgSrc + "img_dog01.jpg")
-				li.p-carousel__item
-					img.p-carousel__body(src=imgSrc + "img_dog02.jpg")
-				li.p-carousel__item
-					img.p-carousel__body(src=imgSrc + "img_dog03.jpg")
-			p.p-daily02__body 02
+		p hello,world.
 			
 		include include/js

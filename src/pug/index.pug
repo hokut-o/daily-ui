@@ -13,6 +13,11 @@ html(lang='ja')
 		include include/title
 		include include/css
 	body
-		p hello,world.
-			
+		h1 Daily UI 08
+		h2 よくあるご質問
+		- for(var i =0; i < 20; i++)
+			dl
+				dt よくある質問はよくありますか？
+				dd 実際に、よくある質問はよくされます。ただ、よくされないときはよくある質問とはいいません。
+
 		include include/js

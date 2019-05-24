@@ -66,10 +66,12 @@
 		"@babel/preset-env": "^7.4.4",
 		"@babel/register": "^7.4.4",
 		"core-js": "^3.0.1",
+		"gulp-clean-css": "^4.2.0",
 		"gulp-html2jade": "^1.1.2",
 		"gulp-inject": "^5.0.2",
 		"gulp-real-favicon": "^0.3.2",
 		"gulp-svg-sprite": "^1.5.0",
-		"gulp-watch": "^5.0.1"
+		"gulp-watch": "^5.0.1",
+		"slick-carousel": "^1.8.1"
 	}
 }

@@ -1,18 +1,27 @@
 -
 	var domain = './'
 	var imgSrc = './img/'
-	var description = 'foo'
-	var keywords = 'foo'
-	var title = 'foo'
+	var description = 'Daily UI : 02'
+	var keywords = ''
+	var title = 'Daily UI : 02'
 	var date = +new Date()
 
 doctype html
 html(lang='ja')
 	head
 		include include/meta
-		include include/ogp
 		include include/title
 		include include/css
 	body
-		p Hello,World.
+		.p-daily02__container
+			h1.c-heading Daily UI
+			ul.p-carousel(data-target-carousel)
+				li.p-carousel__item
+					img.p-carousel__body(src=imgSrc + "img_dog01.jpg")
+				li.p-carousel__item
+					img.p-carousel__body(src=imgSrc + "img_dog02.jpg")
+				li.p-carousel__item
+					img.p-carousel__body(src=imgSrc + "img_dog03.jpg")
+			p.p-daily02__body 02
+			
 		include include/js

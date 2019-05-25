@@ -1,0 +1,68 @@
+imgSrc = "../img/"
+.day8
+	&__heading
+		width 1000px
+		height 220px
+		background-image: url(imgSrc + "bg_main.jpg")
+		background-size: cover
+		margin: 10px auto 0
+		&__inner
+			width 1000px
+			height 220px
+			background-image linear-gradient(to left, rgba(#4181aa, .8), rgba(#6760b9, .8) 50%, rgba(#741977, .8))
+			display: flex
+			justify-content: center
+			align-items: center
+			line-height: 1
+			color: #fff
+			letter-spacing: .6
+			font-size: 4rem
+			font-weight: normal
+	&__container
+		width: 1000px
+		margin: 0 auto
+		padding-bottom: 35px
+	&__box
+		margin: 5px auto 0
+		&:first-of-type
+			margin-top: 60px
+	&__ttl
+		width 1000px
+		height 56px
+		background-image linear-gradient(to left, rgba(#4181aa,.8), rgba(#6760b9,.8) 50%, rgba(#741977,.8))
+		display: flex
+		align-items: center
+		padding: 0 20px
+		font-size: 1.6rem
+		color: #fff
+		cursor pointer
+		&__body
+			flex: 1
+		&__icon
+			width: 16px
+			height: 16px
+			display: block
+			position: relative
+			&__line1
+				position: absolute
+				height: 2px
+				width: 16px
+				top: 50%
+				margin-top: -1px
+				background-color: #fff
+				transition all .2s ease-out
+			&__line2
+				position: absolute
+				height: 16px
+				width: 2px
+				left: 50%
+				margin-left: -1px
+				background-color: #fff
+				transition all .3s ease-out
+		&.is-active
+			.day8__ttl__icon__line1
+				opacity: 0
+			.day8__ttl__icon__line2
+				transform rotate(-90deg)
+	&__data
+		display: none

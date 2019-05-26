@@ -6,10 +6,7 @@ const trigger = {
 
 const toggleAccordion = () => {
 	trigger.accordion.on("click", e => {
-		$(e.currentTarget)
-		.toggleClass("is-active")
-		.next()
-		.slideToggle("fast", "swing");
+		$(e.currentTarget).toggleClass("is-active").next().stop().slideToggle(300, "swing");
 	});
 };
 

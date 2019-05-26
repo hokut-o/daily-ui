@@ -1,3 +1,5 @@
+import TerserPlugin from "terser-webpack-plugin"  
+
 module.exports = {
 	mode: 'production',
 	entry: './src/js/app.js',

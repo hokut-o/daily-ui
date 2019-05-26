@@ -27,12 +27,8 @@ const paths = {
 	iconfont_dest: './dest/font/',
 	iconfont_build: './dest/font/',
 	
-	webfont_src: './src/webfont/*.*',
 	font_dest: './dest/webfont/',
 	font_build: './docs/font/',
-	
-	favicon_src: './src/favicon/',
-	favicon_dest: './dest/favicon/',
 	
 	template_src: './src/template/',
 	template_dest: './dest/template/',

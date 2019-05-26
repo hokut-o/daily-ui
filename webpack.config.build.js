@@ -5,6 +5,20 @@ module.exports = {
 		path: `${__dirname}/dest/js`,
 		filename: 'app.js'
 	},
+	optimization: {
+		minimizer: [
+			new TerserPlugin({
+				terserOptions: {
+					output: {
+						comments: false,
+					},
+					compress: {
+						drop_console: true,
+					},
+				},
+			}),
+		],
+	},
 	module: {
 		rules: [
 			{

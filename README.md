@@ -1,1 +1,1 @@
-github.io
+https://hokut-o.github.io/daily-ui/{day}

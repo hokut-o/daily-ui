@@ -1,9 +1,8 @@
 -
 	var domain = './'
-	var imgSrc = './img/'
-	var description = ''
-	var keywords = ''
-	var title = ''
+	var description = 'Daily UI 25'
+	var keywords = 'Daily UI 25'
+	var title = 'Daily UI 25'
 	var date = +new Date()
 
 doctype html
@@ -13,6 +12,19 @@ html(lang='ja')
 		include include/title
 		include include/css
 	body
-		p hello,world.
-			
+		header.l-header
+			.p-menu
+				.p-menu__item
+				.p-menu__item
+			p.p-header__body
+				| Daily UI 25
+		main.l-main
+			p.p-daily25__question あなたはこのサービスを人に勧める可能性はどのくらいありますか？
+			p.p-daily25__num(data-target-range) 0
+			.p-daily25__answer
+				p.p-daily25__answer__impossible 全くない
+				p.p-daily25__answer__possible 非常にある
+			form.p-form
+				input.p-form__range(type="range" min="0" max="10" step="1")
+			button.c-btn(type="submit") 次へ
 		include include/js

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Daily UI 25">
+    <meta name="keywords" content="Daily UI 25">
+    <title>Daily UI 25</title>
+    <link rel="stylesheet" href="./css/app.css?1561361490222">
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="p-menu">
+        <div class="p-menu__item"></div>
+        <div class="p-menu__item"></div>
+      </div>
+      <p class="p-header__body">Daily UI 25</p>
+    </header>
+    <main class="l-main">
+      <p class="p-daily25__question">あなたはこのサービスを人に勧める可能性はどのくらいありますか？</p>
+      <p class="p-daily25__num" data-target-range>0</p>
+      <div class="p-daily25__answer">
+        <p class="p-daily25__answer__impossible">全くない</p>
+        <p class="p-daily25__answer__possible">非常にある</p>
+      </div>
+      <form class="p-form">
+        <input class="p-form__range" type="range" min="0" max="10" step="1" value="0" data-trigger-range>
+        <button class="c-btn" type="submit">次へ</button>
+      </form>
+    </main>
+    <script src="./js/app.js?1561361490222"></script>
+  </body>
+</html>

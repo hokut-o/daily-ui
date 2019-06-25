@@ -1,9 +1,8 @@
 -
 	var domain = './'
-	var imgSrc = './img/'
-	var description = ''
-	var keywords = ''
-	var title = ''
+	var description = 'foo'
+	var keywords = 'foo'
+	var title = 'foo'
 	var date = +new Date()
 
 doctype html
@@ -13,6 +12,9 @@ html(lang='ja')
 		include include/title
 		include include/css
 	body
-		p hello,world.
-			
+		.l-main
+			label.p-form__label(for="email") ✉️ Email
+			.p-suggest__container
+				input.p-form__input#email(autocomplete='off' type='email' data-trigger-suggest)
+				ul.p-suggest__result#auto-list(style='display:none;' data-target-suggest)
 		include include/js
